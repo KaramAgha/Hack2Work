@@ -9,27 +9,44 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Congratulations!</h1>
-        <div class="govuk-panel__body">
+        <h1 class="govuk-heading-l">Congratulations!</h1>
+        <div class="govuk-body-l" style="margin-bottom: 30px;">
           Your answers indicate that you are a great team worker, capable of 
           analysing complex data and giving great presentations.
         </div>
-      </div>
 
       <h2 class="govuk-heading-m">Suggested roles</h2>
 
       <p>
         We've selected the following job roles which may be of interest to 
-        you based on your skills and experience.
+        you based on your skills and experience. You can also filter to see how
+        many opportunities there are near you:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li><a href="">Marketing</a></li>
-        <li><a href="">Driver</a></li>
-        <li><a href="">Software Developer</a></li>
-        <li><a href="">Finance</a></li>
+        <li>
+          <a href="">Marketing</a><span id="marketing-stats"></span>
+        </li>
+        <li>
+          <a href="">Driver</a><span id="driver-stats"></span>
+        </li>
+        <li>
+          <a href="">Software Developer</a><span id="developer-stats"></span>
+        </li>
+        <li>
+          <a href="">Finance</a><span id="finance-stats"></span>
+        </li>
       </ul>
+
+
+      <input class="govuk-input" style="margin-bottom: 10px;" type="text" placeholder="Enter your postcode" id="postcode">
+    
+      <div class="govuk-body">
+          <span>Enter maximum distance (maximum 20 miles):</span>
+          <input id="distance" type="range" min="0" max="20" value="0" onchange="updateTextInput(this.value)">
+          <span id="miles"></span>
+      </div>
+
 
     </div>
   </div>
