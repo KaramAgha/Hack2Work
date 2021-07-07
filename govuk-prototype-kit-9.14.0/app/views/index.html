@@ -1,0 +1,44 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">The Hack2Work Job Finder</h1>
+      <p>
+        This project helps customers find jobs that are more relevant to them
+        than the suggestions currently given by government services. It does 
+        this by not only taking into account their skillset, but also 
+        considering the job market in their area as well as suggesting courses
+        and upskill opportunities.
+      </p>
+      <h2 class="govuk-heading-m">Landing point</h2>
+
+      <p>
+        This app will fit into the user journey after the NCS skills assessment.
+        Users will take the assessment, and we'll use the data they input there
+        as well as their postcode to create more accurate job and learning 
+        opportunities than the ones currently suggested to them.
+      </p>
+
+      <h2 class="govuk-heading-m">Links</h2>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          <a href="/start">Use this service</a>
+        </li>
+        <li>
+          <a href="https://nationalcareers.service.gov.uk/skills-assessment">
+            View the NCS skill assessment tool
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+{% endblock %}
