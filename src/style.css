@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+.submit-button {
+    margin-top: 10px;
+}
+
+.response {
+    margin: 5px;
+}
+
+
