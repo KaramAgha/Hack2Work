@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your Local Jobs
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Local Jobs</h1>
+    <h2 class="govuk-heading-l">Top 10 jobs in your area</h2>
+
+    <p>
+      Listed below are the top 10 jobs in your local area.
+      The service would pull information on Labour Market trends from ONS
+      and filter the data to determine which careers were on the rise.
+    </p>
+
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Career</th>
+          <th scope="col" class="govuk-table__header">Change from previous year</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Warehouse Operative</th>
+          <td class="govuk-table__cell">up 20%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Customer Assistant</th>
+          <td class="govuk-table__cell">down 8%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Merchandiser</th>
+          <td class="govuk-table__cell">up 10%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Sales Assistant</th>
+          <td class="govuk-table__cell">up 3%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Software Developer</th>
+          <td class="govuk-table__cell">up 12%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Teacher</th>
+          <td class="govuk-table__cell">down 5%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Nurse</th>
+          <td class="govuk-table__cell">down 2%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Accountant</th>
+          <td class="govuk-table__cell">up 12%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Carer</th>
+          <td class="govuk-table__cell">up 6%</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Hospitality</th>
+          <td class="govuk-table__cell">down 2%</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+
+    <h2 class="govuk-heading-l">What this means for you</h2>
+    <p>
+      You can use this information to your advantage by considering careers 
+      in popular sectors, that you may not have previously thought about.
+    </p>
+    
+    </div>
+  </div>
+
+{% endblock %}
