@@ -20,35 +20,114 @@
       <p>
         We've selected the following job roles which may be of interest to 
         you based on your skills and experience. You can also filter to see how
-        many opportunities there are near you:
+        many opportunities there are near the postcode you provided:
       </p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>
-          <a href="">Marketing</a><span id="marketing-stats"></span>
+          <a href="">Marketing</a><span id="marketing-stats"> (11 local jobs)</span>
         </li>
         <li>
-          <a href="">Driver</a><span id="driver-stats"></span>
+          <a href="">Driver</a><span id="driver-stats"> (14 local jobs)</span>
         </li>
         <li>
-          <a href="">Software Developer</a><span id="developer-stats"></span>
+          <a href="">Software Developer</a><span id="developer-stats"> (2 local jobs)</span>
         </li>
         <li>
-          <a href="">Finance</a><span id="finance-stats"></span>
+          <a href="">Finance</a><span id="finance-stats"> (23 local jobs)</span>
         </li>
       </ul>
 
 
-      <input class="govuk-input" style="margin-bottom: 10px;" type="text" placeholder="Enter your postcode" id="postcode">
-    
-      <div class="govuk-body">
-          <span>Enter maximum distance (maximum 20 miles):</span>
-          <input id="distance" type="range" min="0" max="20" value="0" onchange="updateTextInput(this.value)">
-          <span id="miles"></span>
-      </div>
+      <p>
+        Select search distance:
+      </p>
 
+      <input id="distance" type="range" min="0" max="20" value="5" onchange="updateTextInput(this.value)">
+      <span class="govuk-body" id="miles">5 miles</span>
 
     </div>
   </div>
 
+  <script>
+    function updateTextInput(val) {
+      document.getElementById('miles').innerText=val+" miles";
+    }
+
+    function displaySuggestions() {
+      const postcode = document.getElementById('postcode').value;
+      let distance = document.getElementById('distance').value;
+      if (postcode === "M4 4AQ" && distance < 10) {
+        document.getElementById('outcome').innerText = "In your area, there are 1,500 jobs in marketing.";
+      } else if (postcode === "M4 4AQ" && distance >= 10) {
+        document.getElementById('outcome').innerText = "In your area, there are 4,500 jobs in marketing.";
+      }
+    }
+
+  //   const data = {
+  //   "distance": {
+  //     "1": {
+  //       "marketing": 1,
+  //       "driver": 6,
+  //       "software developer": 1,
+  //       "finance": 0
+  //     },
+  //     "2": {
+  //       "marketing": 2,
+  //       "driver": 7,
+  //       "software developer": 1,
+  //       "finance": 0
+  //     },
+  //     "3": {
+  //       "marketing": 3,
+  //       "driver": 9,
+  //       "software developer": 1,
+  //       "finance": 0
+  //     },
+  //     "5": {
+  //       "marketing": 4,
+  //       "driver": 12,
+  //       "software developer": 1,
+  //       "finance": 3
+  //     },
+  //     "8": {
+  //       "marketing": 5,
+  //       "driver": 12,
+  //       "software developer": 2,
+  //       "finance": 11
+  //     },
+  //     "13": {
+  //       "marketing": 6,
+  //       "driver": 15,
+  //       "software developer": 2,
+  //       "finance": 11
+  //     },
+  //     "21": {
+  //       "marketing": 7,
+  //       "driver": 28,
+  //       "software developer": 2,
+  //       "finance": 16
+  //     }
+  //   }
+  // };
+  //   var marText = "";
+  //   var driText = "";
+  //   var devText = "";
+  //   var finText = "";
+  //   var distance;
+
+  //   const input = document.getElementsByName("distance")
+  //   const handle = function (e) {
+  //     distance = input.value;
+  //     document.getElementById("marketing-stats").textContent = ' d';
+  //     document.getElementById("marketing-stats").textContent = ' g';
+  //     console.log('sensed input')
+  //   }
+  //   addEventListener('input', handle());
+
+  //   console.log(distance)
+
+  //   console.log('reached here!!')
+  </script>
+  
 {% endblock %}
