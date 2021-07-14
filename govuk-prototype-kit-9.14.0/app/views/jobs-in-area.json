@@ -1,0 +1,46 @@
+{
+  "distance": {
+    "1": {
+      "marketing": 1,
+      "driver": 6,
+      "software developer": 1,
+      "finance": 0
+    },
+    "2": {
+      "marketing": 2,
+      "driver": 7,
+      "software developer": 1,
+      "finance": 0
+    },
+    "3": {
+      "marketing": 3,
+      "driver": 9,
+      "software developer": 1,
+      "finance": 0
+    },
+    "5": {
+      "marketing": 4,
+      "driver": 12,
+      "software developer": 1,
+      "finance": 3
+    },
+    "8": {
+      "marketing": 5,
+      "driver": 12,
+      "software developer": 2,
+      "finance": 11
+    },
+    "13": {
+      "marketing": 6,
+      "driver": 15,
+      "software developer": 2,
+      "finance": 11
+    },
+    "21": {
+      "marketing": 7,
+      "driver": 28,
+      "software developer": 2,
+      "finance": 16
+    }
+  }
+}

@@ -1,37 +1,54 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Confirmation page example
+RouteToWork
 {% endblock %}
 
 {% block content %}
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <div class="govuk-panel govuk-panel--confirmation">
-        <h1 class="govuk-panel__title">Congratulations!</h1>
-        <div class="govuk-panel__body">
-          Your answers indicate that you are a great team worker, capable of 
-          analysing complex data and giving great presentations.
-        </div>
-      </div>
-
-      <h2 class="govuk-heading-m">Suggested roles</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">Your Route to Work</h1>
+    </div>
+    <h2 class="govuk-heading-m">Suggested roles</h2>
+    <p>
+      Based on your answers, you will find some information below that will support your route to work.
+      This includes recommended job roles, a check of how many opportunities are available in your area
+      and a personalised list of training opportunities.
+    </p>
+    <p>
+      Click on one of the roles below to find out more about how to get a
+      role in this field and filter to see the number of jobs in your local area.
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="/digital">Digital</a><span id="marketing-stats"> (11 local jobs)</span></li>
+      <li><a href="/care-work">Care Work</a><span id="driver-stats"> (14 local jobs)</span></li>
+      <li><a href="/hospitality">Hospitality</a><span id="developer-stats"> (2 local jobs)</span></li>
+    </ul>
 
       <p>
-        We've selected the following job roles which may be of interest to 
-        you based on your skills and experience.
+        Select search distance:
       </p>
 
-      <ul class="govuk-list govuk-list--bullet">
-        <li><a href="">Marketing</a></li>
-        <li><a href="">Driver</a></li>
-        <li><a href="">Software Developer</a></li>
-        <li><a href="">Finance</a></li>
-      </ul>
+      <input id="distance" type="range" min="0" max="20" value="5" onchange="updateTextInput(this.value)">
+      <span class="govuk-body" id="miles">5 miles</span>
 
-    </div>
+      <h2 class="govuk-heading-m">Popular local jobs</h2>
+      <p>
+        Want to see more about the industry demand for jobs local to you? Click 
+        the link below to find the top 10 most popular jobs in your local area.
+      </p>
+      <a href="/local-jobs-results" role="button" draggable="false"
+         class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"
+         data-module="govuk-button">
+          Find Jobs
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19"
+               viewBox="0 0 33 40" role="presentation" focusable="false">
+              <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+          </svg>
+      </a>
   </div>
+</div>
 
 {% endblock %}
