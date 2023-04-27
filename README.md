@@ -11,5 +11,5 @@ of the Hackathon.
 2. Run `npm start`
 
 ## Contributors
-- Karam Aghar
+- Karam Agha
 - Lewis Jones (lewis.jones@engineering.digital.dwp.gov.uk)
